@@ -33,6 +33,45 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# Email Configuration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Email Configuration
+
+MAILERS = {
+    "default": {
+        "BACKEND": "django.core.mail.backends.smtp.EmailBackend",
+        "OPTIONS": {
+            "host": "smtp.gmail.com",
+            "port": 587,
+            "use_tls": True,
+            "username": env("EMAIL_HOST_USER"),
+            "password": env("EMAIL_HOST_PASSWORD"),
+            "timeout": 10,
+        },
+    },
+}
+
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
+
+
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
