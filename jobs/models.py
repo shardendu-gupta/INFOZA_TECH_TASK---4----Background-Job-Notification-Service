@@ -10,7 +10,6 @@ class Jobs(models.Model):
         COMPLETED = 'COMPLETED', 'Completed',
         FAILED = 'FAILED', 'Failed'
 
-    id = models.BigAutoField(unique=True)
     recipient_email = models.EmailField()
     subject = models.CharField(max_length=255)
     message = models.TextField()
@@ -23,5 +22,5 @@ class Jobs(models.Model):
     completed_at = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
-        return f"Job{self.id} - {self.status}"
+        return f"Job {self.id} - {self.status}"
 
