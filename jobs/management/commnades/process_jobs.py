@@ -80,4 +80,3 @@ class Commnad(BaseCommand):
                     break
 
                 time.sleep(interval)
-
