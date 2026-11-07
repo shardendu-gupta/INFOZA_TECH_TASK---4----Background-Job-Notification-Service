@@ -26,12 +26,10 @@ class JobDetailsView(generics.RetrieveAPIView):
 
 
 class JobStatusView(APIView):
-
     def get(self, requst, pk):
 
         try:
             job = Jobs.objects.get(pk=pk)
-
         except Jobs.DoesNotExist:
             return Response({"error": "job not found."}, status=status.HTTP_404_NOT_FOUND)
 
