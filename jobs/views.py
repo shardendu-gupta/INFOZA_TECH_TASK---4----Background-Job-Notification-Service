@@ -7,11 +7,11 @@ from rest_framework.response import Response
 from rest_framework import status
 
 
+
 class JobCreateView(generics.CreateAPIView):
     queryset = Jobs.objects.all()
     serializer_class = JobSerializer
     permission_classes = [AllowAny]
-
 
 
 class JobListView(generics.ListAPIView):
@@ -43,4 +43,5 @@ class JobStatusView(APIView):
         "error_message": job.error_message,
         "completed_at": job.completed_at,
     })
-    
+
+

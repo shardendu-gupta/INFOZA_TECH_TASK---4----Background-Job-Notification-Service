@@ -35,23 +35,6 @@ ALLOWED_HOSTS = []
 
 # Email Configuration
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Email Configuration
-
 MAILERS = {
     "default": {
         "BACKEND": "django.core.mail.backends.smtp.EmailBackend",
@@ -67,9 +50,6 @@ MAILERS = {
 }
 
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
-
-
-
 
 
 # Application definition
@@ -166,8 +146,3 @@ STATIC_URL = 'static/'
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
-MAILERS = {
-    'default': {
-        'BACKEND': 'django.core.mail.backends.console.EmailBackend',
-    },
-}
