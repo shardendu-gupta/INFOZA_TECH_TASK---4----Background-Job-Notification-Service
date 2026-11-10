@@ -50,16 +50,16 @@ Background-Job-Notification-Service/
 
 ## Current Development Progress
 
-- [x] Django project setup
-- [x] Django REST Framework configuration
-- [x] Job model creation
-- [x] Job status management
-- [ ] Job creation API
-- [ ] Background worker implementation
-- [ ] Gmail SMTP integration
-- [ ] Automatic retry mechanism
-- [ ] Job status API
-- [ ] API testing
+-  Django project setup
+-  Django REST Framework configuration
+-  Job model creation
+-  Job status management
+-  Job creation API
+-  Background worker implementation
+-  Gmail SMTP integration
+-  Automatic retry mechanism
+-  Job status API
+-  API testing
 
 ## Learning Objectives
 
