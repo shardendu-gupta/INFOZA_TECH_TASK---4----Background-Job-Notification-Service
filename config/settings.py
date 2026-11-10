@@ -35,21 +35,21 @@ ALLOWED_HOSTS = []
 
 # Email Configuration
 
-MAILERS = {
-    "default": {
-        "BACKEND": "django.core.mail.backends.smtp.EmailBackend",
-        "OPTIONS": {
-            "host": "smtp.gmail.com",
-            "port": 587,
-            "use_tls": True,
-            "username": env("EMAIL_HOST_USER"),
-            "password": env("EMAIL_HOST_PASSWORD"),
-            "timeout": 10,
-        },
-    },
-}
+# Email Configuration
 
-DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD').replace(' ', '')
+DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+EMAIL_TIMEOUT = 30
+
 
 
 # Application definition
